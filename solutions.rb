@@ -36,17 +36,20 @@ def find_next_square(sq)
 
 # array_diff([1,2],[1]) == [2]
 
-def array_diff(a, b)
-  #your code here
-  new_array = []
-  a.each do |n|
-    if !b.include?(n)
-      new_array << n
-    end
-  end
+# def array_diff(a, b)
+#   #your code here
+#   new_array = []
+#   a.each do |n|
+#     if !b.include?(n)
+#       new_array << n
+#     end
+#   end
   
-  return new_array
-end
+#   return new_array
+# end
 
+def array_diff(a, b)
+  a - b
+end
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------
