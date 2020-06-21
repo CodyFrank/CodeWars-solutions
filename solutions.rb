@@ -121,3 +121,33 @@ def jumpingOnClouds(c)
   end
 return jump_count
 end
+
+
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------
+# Lilah has a string, , of lowercase English letters that she repeated infinitely many times.
+
+# Given an integer, , find and print the number of letter a's in the first  letters of Lilah's infinite string.
+
+# For example, if the string  and , the substring we consider is , the first  characters of her infinite string. There are  occurrences of a in the substring.
+
+# Function Description
+
+# Complete the repeatedString function in the editor below. It should return an integer representing the number of occurrences of a in the prefix of length  in the infinitely repeating string.
+
+# repeatedString has the following parameter(s):
+
+# s: a string to repeat
+# n: the number of characters to consider
+
+def repeatedString(s, n)
+  count = s.count("a")
+  rep = (n / s.length)
+  if n % s.length != 0
+      short_s = s.slice(0, n % s.length)
+      return (count * rep) + short_s.count("a")
+  else
+      return (count * rep)
+  end
+  
+end
